@@ -1,0 +1,135 @@
+/* Big Buck Mounts: coming-soon page.
+   Colours: bone paper, olive-black ink and a blaze-orange accent,
+   with a dark scheme that follows the visitor's system setting. */
+
+:root {
+  color-scheme: light dark;
+
+  --bg: #f4efe4;
+  --bg-glow: #fbf8f0;
+  --ink: #23291f;
+  --muted: #5d6455;
+  --accent: #a8430f;
+  --plaque: #c8571b;
+  --rule: #d9d1bf;
+
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #141812;
+    --bg-glow: #1d231a;
+    --ink: #ece6d8;
+    --muted: #a3a898;
+    --accent: #e98a47;
+    --plaque: #d9662a;
+    --rule: #333a2d;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  background: radial-gradient(ellipse at 50% 35%, var(--bg-glow), var(--bg) 70%) var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+}
+
+.page {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1.5rem 2rem;
+  text-align: center;
+}
+
+.mark {
+  width: clamp(9rem, 38vw, 13rem);
+  height: auto;
+  margin-bottom: 2rem;
+}
+
+.mark-antlers {
+  stroke: var(--ink);
+}
+
+.mark-plaque {
+  fill: var(--plaque);
+}
+
+.eyebrow {
+  margin: 0 0 0.75rem;
+  color: var(--accent);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(2.5rem, 9vw, 4.75rem);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.05;
+  text-wrap: balance;
+}
+
+.lede {
+  max-width: 30rem;
+  margin: 1.25rem 0 0;
+  color: var(--muted);
+  font-size: 1.125rem;
+  text-wrap: balance;
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  margin: 2.25rem 0 0;
+  padding: 0.5rem 1.125rem;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  font-size: 0.9375rem;
+  font-weight: 500;
+}
+
+.status-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--plaque);
+}
+
+.footer {
+  padding: 1.5rem;
+  color: var(--muted);
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+.footer p {
+  margin: 0;
+}

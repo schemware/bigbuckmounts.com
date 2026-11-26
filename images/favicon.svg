@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect width="200" height="200" rx="40" fill="#23291f"/>
+  <g transform="translate(0 12)">
+    <g fill="none" stroke="#f4efe4" stroke-linecap="round" stroke-linejoin="round">
+      <g id="antler">
+        <path stroke-width="11" d="M90 124 C84 96 40 100 22 70 C12 52 16 30 34 14"/>
+        <path stroke-width="10" d="M79 107 Q74 92 79 78"/>
+        <path stroke-width="10" d="M60.5 97.5 Q55 72 63 48"/>
+        <path stroke-width="10" d="M39 87 Q34 62 42 40"/>
+      </g>
+      <use href="#antler" transform="translate(200 0) scale(-1 1)"/>
+    </g>
+    <path fill="#c8571b" d="M76 120 H124 V140 Q124 160 100 170 Q76 160 76 140 Z"/>
+  </g>
+</svg>
